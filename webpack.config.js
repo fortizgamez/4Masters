@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin =  require('html-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/js/app.js',
@@ -8,9 +9,7 @@ module.exports = {
     },
     devtool: 'eval-source-map',
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.html'
-        })
+        new HtmlWebpackPlugin({template: './index.html'})        
     ],
     module: {
         rules: [
@@ -26,7 +25,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(svg|gif|png|eot|woff|ttf)$/,
+                test: /\.(eot|woff|ttf)$/,
                 loaders: [
                     // Transforms files into base64 URIs
                     'url-loader'
