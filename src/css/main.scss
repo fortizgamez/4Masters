@@ -1,0 +1,78 @@
+/* Main */
+@import "animations.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "reset.scss";
+@import "elements.scss";
+@import "fonts.scss";
+@import "layout.scss";
+@import "./components/loading.scss";
+@import "./components/navigation.scss";
+@import "./components/artist-section.scss";
+
+body {
+    scroll-behavior: smooth;
+}
+
+main {    
+    overflow: hidden;
+}
+
+body {
+    &.loaded {
+        overflow: initial;
+    };
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $gray-9;
+    color: $gray-0;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $gray-9;
+    color: $gray-0;    
+
+    @include media-breakpoint-large {
+        align-items: center;
+        justify-content: center;
+    }    
+
+    > div {
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-large {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+}
+
+
+#contact__bibliography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: $padding-xxl;
+    font-size: 0.8rem;
+    
+    ul {
+        margin: $margin-xl 0 0 $margin-xl;
+        list-style-type: circle;
+    }
+}
+
+#contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: $padding-xxl;
+}
