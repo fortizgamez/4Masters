@@ -3,6 +3,7 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const ImageminPlugin = require("imagemin-webpack");
 
+
 module.exports = {
     entry: './src/js/index.js',
     output: {
