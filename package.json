@@ -1,5 +1,5 @@
 {
-  "name": "webpack-static-site-example",
+  "name": "4-masters",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,9 +19,10 @@
     "@babel/preset-env": "^7.8.4",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
+    "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.3.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.11.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",

@@ -1,5 +1,6 @@
-const HtmlWebpackPlugin =  require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
     entry: './src/js/index.js',
@@ -10,7 +11,14 @@ module.exports = {
     devtool: 'eval-source-map',
     plugins: [
         new HtmlWebpackPlugin({template: './index.html'}),
-        new MiniCSSExtractPlugin()
+        new MiniCSSExtractPlugin(),
+        new FaviconsWebpackPlugin({
+            logo: './src/img/favicon.png',
+            cache: true,
+            publicPath: 'img/',
+            outputPath: '/img/favicon',
+            prefix: 'favicon/'
+        })
     ],
     module: {
         rules: [
