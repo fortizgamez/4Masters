@@ -1,23 +1,24 @@
 const HtmlWebpackPlugin =  require('html-webpack-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: './src/js/index.js',
     output: {
         filename: 'bundle.min.js',
         path: __dirname + '/dist'
     },
     devtool: 'eval-source-map',
     plugins: [
-        new HtmlWebpackPlugin({template: './index.html'})        
+        new HtmlWebpackPlugin({template: './index.html'}),
+        new MiniCSSExtractPlugin()
     ],
     module: {
         rules: [
             { 
                 test: /\.s[ac]ss$/i,
                 use: [
-                    // Creates `style` nodes from JS strings
-                    'style-loader',
+                    // Extract CSS from JS to place in other file
+                    MiniCSSExtractPlugin.loader,
                     // Translates CSS into CommonJS
                     'css-loader',
                     // Compiles Sass to CSS
@@ -25,7 +26,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(eot|woff|ttf)$/,
+                test: /\.(png|jpg|svg|eot|woff|ttf)$/,
                 loaders: [
                     // Transforms files into base64 URIs
                     'url-loader'

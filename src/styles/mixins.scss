@@ -1,5 +1,3 @@
-@import './variables.scss';
-
 @mixin media-breakpoint-medium {
     @media screen and (min-width: $medium-breakpoint){
         @content;

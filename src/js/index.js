@@ -1,3 +1,7 @@
+// SCSS
+import '../styles/index.scss';
+
+// JS
 // import './loading';
 import './navigation';
 // import './progress-bar';

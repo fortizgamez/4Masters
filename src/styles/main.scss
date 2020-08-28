@@ -1,15 +1,3 @@
-/* Main */
-@import "animations.scss";
-@import "variables.scss";
-@import "mixins.scss";
-@import "reset.scss";
-@import "elements.scss";
-@import "fonts.scss";
-@import "layout.scss";
-@import "./components/loading.scss";
-@import "./components/navigation.scss";
-@import "./components/artist-section.scss";
-
 body {
     scroll-behavior: smooth;
 }
