@@ -26,21 +26,31 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|svg|eot|woff|ttf)$/,
-                loaders: [
-                    // Transforms files into base64 URIs
-                    'url-loader'
-                ]
+                // Transforms files into base64 URIs
+                test: /\.(eot|woff|ttf)$/,
+                loader: 'url-loader'
             },
             {
+                // The file-loader resolves import/require() on a file into a url and emits the file into the output directory.
+                test: /\.(png|jpg|svg)$/,
+                loader: 'file-loader',
+                options: {                    
+                    name: '[name].[ext]',
+                    outputPath: 'img'
+                }
+            },
+            {
+                // Every local <img src="image.png"> turn to (require('./image.png'))
+                test: /\.(html)$/,
+                loader: 'html-loader'
+            },
+            {
+                // Transpile Javascript code
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
-                use: {
-                    // Transpile Javascript code
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
                 }
               }
         ]
