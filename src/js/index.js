@@ -2,9 +2,8 @@
 import '../styles/index.scss';
 
 // JS
-// import './loading';
+import './loading';
 import './navigation';
-// import './progress-bar';
 import './scenes';
 import './velazquez_scene';
 import './goya_scene';
