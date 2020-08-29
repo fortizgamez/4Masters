@@ -3,7 +3,6 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const ImageminPlugin = require("imagemin-webpack");
 
-
 module.exports = {
     entry: './src/js/index.js',
     output: {
@@ -76,10 +75,17 @@ module.exports = {
                 // Transpile Javascript code
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env']
-                }
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['@babel/preset-env']
+                        }
+                    },
+                    {
+                        loader: 'eslint-loader'
+                    }
+                ]                
               }
         ]
     }
