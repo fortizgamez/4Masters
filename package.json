@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open",
-    "lint": "eslint . --ext .js --ignore-pattern node_modules/ dist/",
-    "lint fix": "eslint --fix"
+    "lint": "eslint src/**/*.js"
   },
   "author": "Kisko Ortiz",
   "license": "ISC",
