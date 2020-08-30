@@ -6,6 +6,7 @@ const line2 = document.querySelector('#line-2');
 const line3 = document.querySelector('#line-3');
 const hamburguerMenu = document.querySelector('#nav__hamburguer-menu');
 const menu = document.querySelector('#nav__menu');
+const navLinks = document.querySelectorAll('#nav__menu a');
 
 const tl = gsap.timeline({ paused: true, reversed: true })
   .addLabel('init')
@@ -16,3 +17,9 @@ const tl = gsap.timeline({ paused: true, reversed: true })
   .set(menu, { zIndex: 10 });
 
 startAndReverse(hamburguerMenu, 'click', tl);
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    tl.reverse();
+  });
+});
