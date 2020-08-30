@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "subtree push": "git subtree push --prefix dist origin gh-pages"
   },
   "author": "Kisko Ortiz",
   "license": "ISC",
