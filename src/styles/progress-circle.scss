@@ -1,0 +1,13 @@
+#svg-circle-progress {
+    position: absolute;
+}
+
+#svg-circle-progress circle {        
+    fill: transparent;
+    stroke: $gray-6;
+    stroke-width: 0.25rem;
+}
+
+#svg-circle-progress #bar {
+    stroke: $gray-2;
+}
