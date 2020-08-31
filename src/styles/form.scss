@@ -1,0 +1,49 @@
+@import './variables';
+
+button {  
+  padding: $padding-md $padding-xxl;
+  font-size: .875rem;
+  font-family: 'Open Sans';
+  background: transparent;
+  border: 1px solid $gray-0;
+  border-radius: 3px;
+  width: 100%;
+  color: $gray-0;
+  text-transform: uppercase;
+  outline: none;
+  transition: all ease-in .2s;
+
+  &:hover {
+    background-color: $gray-0;
+    color: $gray-9;
+  }
+}
+
+.input, .textarea {
+  position: relative;
+  padding-top: $padding-xl;
+  margin-bottom: $margin-xxl;
+
+  .placeholder {
+    position: absolute;
+    bottom: 0;
+    color: $gray-5;
+    visibility: visible;
+
+    &.hide {
+      visibility: hidden;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid $gray-0;
+    color: $gray-0;
+    resize: vertical;
+  }
+
+  &.focus .placeholder {
+    top: 0;
+  }
+}

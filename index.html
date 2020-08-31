@@ -40,12 +40,12 @@
           <div class="artist-section__wrapper">
             <div class="artist-section__welcome"></div>
             <div class="artist-section__img-frame">
-              <img id="velazquez-image-1" loading="eager" src="src/img/the-triumph-of-bacchus-background.png" />              
-              <img id="velazquez-image-2" loading="eager" src="src/img/the-triumph-of-bacchus-main-character.png" />              
-              <img id="velazquez-image-3" loading="eager" src="src/img/the-triumph-of-bacchus-man2.png" />
-              <img id="velazquez-image-4" loading="eager" src="src/img/the-triumph-of-bacchus-baccus-and-man.png" />
-              <img id="velazquez-image-5" loading="eager" src="src/img/the-triumph-of-bacchus-man1.png" />
-              <img id="velazquez-image-6" loading="eager" src="src/img/the-triumph-of-bacchus-tree.png" />
+              <div id="velazquez-image-1"></div>
+              <div id="velazquez-image-2"></div>
+              <div id="velazquez-image-3"></div>
+              <div id="velazquez-image-4"></div>
+              <div id="velazquez-image-5"></div>
+              <div id="velazquez-image-6"></div>
             </div> 
             <div class="artist-section__info">
               <a href="#" class="artist-section__info-link">
@@ -68,11 +68,11 @@
           <div class="artist-section__wrapper">
             <div class="artist-section__welcome"></div>
             <div class="artist-section__img-frame">
-              <img id="goya-image-1" loading="eager" src="src/img/the-third-of-may-1808-sky.png" />
-              <img id="goya-image-2" loading="eager" src="src/img/the-third-of-may-1808-cathedral.png" />
-              <img id="goya-image-3" loading="eager" src="src/img/the-third-of-may-1808-medow.png" />              
-              <img id="goya-image-4" loading="eager" src="src/img/the-third-of-may-1808-crowd.png" />
-              <img id="goya-image-5" loading="eager" src="src/img/the-third-of-may-1808-main-characters.png" />
+              <div id="goya-image-1"></div>
+              <div id="goya-image-2"></div>
+              <div id="goya-image-3"></div>
+              <div id="goya-image-4"></div>
+              <div id="goya-image-5"></div>
             </div>
             <div class="artist-section__info">
               <a href="#" class="artist-section__info-link">
@@ -95,17 +95,17 @@
           <div class="artist-section__wrapper">
             <div class="artist-section__welcome"></div>
             <div class="artist-section__img-frame">
-              <img id="picasso-image-1" loading="eager" src="src/img/guernica-background.png" />
-              <img id="picasso-image-2" loading="eager" src="src/img/guernica-bull.png" />
-              <img id="picasso-image-3" loading="eager" src="src/img/guernica-horse-body.png" />
-              <img id="picasso-image-4" loading="eager" src="src/img/guernica-horse-head.png" />
-              <img id="picasso-image-5" loading="eager" src="src/img/guernica-arm.png" />
-              <img id="picasso-image-6" loading="eager" src="src/img/guernica-victim-1.png" />
-              <img id="picasso-image-7" loading="eager" src="src/img/guernica-victim-2.png" />
-              <img id="picasso-image-8" loading="eager" src="src/img/guernica-victim-3-body.png" />
-              <img id="picasso-image-9" loading="eager" src="src/img/guernica-victim-3-head.png" />
-              <img id="picasso-image-10" loading="eager" src="src/img/guernica-victim-4-arm.png" />
-              <img id="picasso-image-11" loading="eager" src="src/img/guernica-victim-4-head.png" />
+              <div id="picasso-image-1"></div>
+              <div id="picasso-image-2"></div>
+              <div id="picasso-image-3"></div>
+              <div id="picasso-image-4"></div>
+              <div id="picasso-image-5"></div>
+              <div id="picasso-image-6"></div>
+              <div id="picasso-image-7"></div>
+              <div id="picasso-image-8"></div>
+              <div id="picasso-image-9"></div>
+              <div id="picasso-image-10"></div>
+              <div id="picasso-image-11"></div>
             </div>
             <div class="artist-section__info">
               <a href="#" class="artist-section__info-link">
@@ -128,10 +128,10 @@
           <div class="artist-section__wrapper">
             <div class="artist-section__welcome"></div>
             <div class="artist-section__img-frame">
-              <img id="dali-image-1" loading="eager" src="src/img/the-persistance-of-memory-sky.png" />
-              <img id="dali-image-2" loading="eager" src="src/img/the-persistance-of-memory-sea-and-mountains.png" />
-              <img id="dali-image-3" loading="eager" src="src/img/the-persistance-of-memory-mainland.png" />
-              <img id="dali-image-4" loading="eager" src="src/img/the-persistance-of-memory-rock.png" />
+              <div id="dali-image-1"></div>
+              <div id="dali-image-2"></div>
+              <div id="dali-image-3"></div>
+              <div id="dali-image-4"></div>
             </div>
             <div class="artist-section__info">
               <a href="#" class="artist-section__info-link">
@@ -182,6 +182,17 @@
             </div>
             <div id="contact__form">
               <h2>Contact</h2>
+              <form action="https://formspree.io/maypgbzo" method="POST">
+                  <div class="input">
+                    <span class="placeholder">Email</span>
+                    <input type="text" placeholder="Please insert your email" name="_replyto">
+                  </div>
+                  <div class="textarea">
+                    <span class="placeholder">Message</span>
+                    <textarea placeholder="Please insert your message" name="message"></textarea>
+                  </div>                  
+                  <button type="submit">Send</button>
+                </form>
             </div>
           </div>
         </section>

@@ -2,6 +2,7 @@
 import '../styles/index.scss';
 
 // JS
+import './form';
 import './loading';
 import './navigation';
 import './scenes';

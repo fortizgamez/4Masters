@@ -25,22 +25,7 @@
     z-index: 10;
 }
 
-#velazquez .artist-section__welcome {
-    background-image: url('../img/velazquez_black.min.svg');
-}
-
-#goya .artist-section__welcome {
-    background-image: url('../img/goya_black.min.svg');
-}
-
-#picasso .artist-section__welcome {
-    background-image: url('../img/picasso_black.min.svg');
-}
-
-#dali .artist-section__welcome {
-    background-image: url('../img/dali_black.min.svg');
-}
-
+// Artist Info
 .artist-section__info {
     position: absolute;
     bottom: 0;
@@ -74,4 +59,139 @@
     }
 }
 
+.artist-section__img-frame {
+    position: relative;
 
+    & > div {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+// Velázquez
+#velazquez .artist-section__welcome {
+    background-image: url('../img/velazquez_black.min.svg');
+}
+
+#velazquez-image-1 {
+    background-image: url('../img/the-triumph-of-bacchus-background.png');
+}
+
+#velazquez-image-2 {
+    background-image: url('../img/the-triumph-of-bacchus-main-character.png');
+}
+
+#velazquez-image-3 {
+    background-image: url('../img/the-triumph-of-bacchus-man2.png');
+}
+
+#velazquez-image-4 {
+    background-image: url('../img/the-triumph-of-bacchus-baccus-and-man.png');
+}
+
+#velazquez-image-5 {
+    background-image: url('../img/the-triumph-of-bacchus-man1.png');
+}
+
+#velazquez-image-6 {
+    background-image: url('../img/the-triumph-of-bacchus-tree.png');
+}
+
+// Goya
+#goya .artist-section__welcome {
+    background-image: url('../img/goya_black.min.svg');
+}
+
+#goya-image-1 {
+    background-image: url('../img/the-third-of-may-1808-sky.png');
+}
+
+#goya-image-2 {
+    background-image: url('../img/the-third-of-may-1808-cathedral.png');
+}
+
+#goya-image-3 {
+    background-image: url('../img/the-third-of-may-1808-medow.png');
+}
+
+#goya-image-4 {
+    background-image: url('../img/the-third-of-may-1808-crowd.png');
+}
+
+#goya-image-5 {
+    background-image: url('../img/the-third-of-may-1808-main-characters.png');
+}
+
+// Picasso
+#picasso .artist-section__welcome {
+    background-image: url('../img/picasso_black.min.svg');
+}
+
+#picasso-image-1 {
+    background-image: url('../img/guernica-background.png');
+}
+
+#picasso-image-2 {
+    background-image: url('../img/guernica-bull.png');
+}
+
+#picasso-image-3 {
+    background-image: url('../img/guernica-horse-body.png');
+}
+
+#picasso-image-4 {
+    background-image: url('../img/guernica-horse-head.png');
+}
+
+#picasso-image-5 {
+    background-image: url('../img/guernica-arm.png');
+}
+
+#picasso-image-6 {
+    background-image: url('../img/guernica-victim-1.png');
+}
+
+#picasso-image-7 {
+    background-image: url('../img/guernica-victim-2.png');
+}
+
+#picasso-image-8 {
+    background-image: url('../img/guernica-victim-3-body.png');
+}
+
+#picasso-image-9 {
+    background-image: url('../img/guernica-victim-3-head.png');
+}
+
+#picasso-image-10 {
+    background-image: url('../img/guernica-victim-4-arm.png');
+}
+
+#picasso-image-11 {
+    background-image: url('../img/guernica-victim-4-head.png');
+}
+
+// Dalí
+#dali .artist-section__welcome {
+    background-image: url('../img/dali_black.min.svg');
+}
+
+#dali-image-1 {
+    background-image: url('../img/the-persistance-of-memory-sky.png');
+}
+
+#dali-image-2 {
+    background-image: url('../img/the-persistance-of-memory-sea-and-mountains.png');
+}
+
+#dali-image-3 {
+    background-image: url('../img/the-persistance-of-memory-mainland.png');
+}
+
+#dali-image-4 {
+    background-image: url('../img/the-persistance-of-memory-rock.png');
+}
