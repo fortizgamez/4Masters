@@ -31,7 +31,7 @@ gsap.timeline({
   scrollTrigger: {
     trigger: section,
     start: 'top top',
-    end: '+=15000',
+    end: '+=10000',
     pin: true,
     anticipatePin: 1,
     // markers: true,
