@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import getLoadingProgress from './utils';
+import { getLoadingProgress } from './utils';
 import setProgress from './progress-circle';
 
 const loading = document.querySelector('#loading');

@@ -1,24 +1,26 @@
 @import './variables';
 
+// Button
 button {  
-  padding: $padding-md $padding-xxl;
   font-size: .875rem;
   font-family: 'Open Sans';
   background: transparent;
   border: 1px solid $gray-0;
   border-radius: 3px;
   width: 100%;
+  min-height: $size-xxxl;
   color: $gray-0;
   text-transform: uppercase;
   outline: none;
   transition: all ease-in .2s;
 
-  &:hover {
+  &:hover, :focus {
     background-color: $gray-0;
     color: $gray-9;
   }
 }
 
+// Input and Textarea
 .input, .textarea {
   position: relative;
   padding-top: $padding-xl;
@@ -26,24 +28,54 @@ button {
 
   .placeholder {
     position: absolute;
+    padding-bottom: $padding-sm;
     bottom: 0;
     color: $gray-5;
     visibility: visible;
-
-    &.hide {
-      visibility: hidden;
-    }
+    z-index: 5;
   }
 
   input, textarea {
+    position: relative;
     width: 100%;
     background: transparent;
     border-bottom: 1px solid $gray-0;
     color: $gray-0;
-    resize: vertical;
+    z-index: 10;
   }
 
-  &.focus .placeholder {
-    top: 0;
+  textarea {
+    resize: vertical;
+    min-height: 5 * $size-xxl;
+  }
+}
+
+// Messages
+.form-message {
+  display: flex;
+  align-items: center;
+  margin-top: $margin-xxl;
+  padding-left: $padding-md;
+  min-height: $size-xxxl;
+  border-width: 1px;
+  border-style: solid;
+
+  &:empty {
+    visibility: hidden;
+  }
+  
+  &.info {
+    color: $info-color;
+    border-color: $info-color;
+  }
+
+  &.error {
+    color: $error-color;
+    border-color: $error-color;
+  }
+
+  &.success {
+    color: $success-color;
+    border-color: $success-color;
   }
 }

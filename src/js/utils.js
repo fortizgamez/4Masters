@@ -16,4 +16,6 @@ const getLoadingProgress = (onProgressChange, onPageLoad) => {
   }, stepTime);
 };
 
-export default getLoadingProgress;
+const validateEmail = (email) => (/\S+@\S+\.\S+/).test(email);
+
+export { getLoadingProgress, validateEmail };
