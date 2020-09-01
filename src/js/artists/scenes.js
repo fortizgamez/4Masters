@@ -4,16 +4,18 @@
 // gsap.registerPlugin(ScrollTrigger);
 
 import { gsap } from 'gsap';
-import startAndReverse from './gsap-helpers';
+import startAndReverse from '../gsap-helpers';
 
 const infoLinkOnClick = (e) => {
   e.preventDefault();
   const { currentTarget } = e;
   const lines = currentTarget.querySelectorAll('line');
+  const parent = currentTarget.closest('.artist-section__info');
   const tl = gsap.timeline({ paused: true, reversed: true })
     .addLabel('init')
     .to(lines[0], 0.5, { attr: { x2: 0, y2: 20 } }, 'init')
-    .to(lines[1], 0.5, { attr: { x1: 20 } }, 'init');
+    .to(lines[1], 0.5, { attr: { x1: 20 } }, 'init')
+    .to(parent, 1, { width: 60, height: 60 });
   startAndReverse(currentTarget, 'click', tl);
   // info-link__line-1
 };

@@ -15,11 +15,10 @@ const goyaInfo4 = document.querySelectorAll('#goya-info-4');
 const goyaInfo5 = document.querySelectorAll('#goya-info-5');
 const goyaInfo6 = document.querySelectorAll('#goya-info-6');
 const goyaInfo7 = document.querySelectorAll('#goya-info-7');
-const goyaImage1 = document.querySelectorAll('#goya-image-1');
 const goyaImage2 = document.querySelectorAll('#goya-image-2');
 const goyaImage3 = document.querySelectorAll('#goya-image-3');
-const goyaImage4 = document.querySelectorAll('#goya-image-4');
-const goyaImage5 = document.querySelectorAll('#goya-image-5');
+// const goyaImage4 = document.querySelectorAll('#goya-image-4');
+// const goyaImage5 = document.querySelectorAll('#goya-image-5');
 const perspective = 1000;
 
 gsap.timeline({
@@ -59,8 +58,5 @@ gsap.timeline({
   .to(goyaInfo6, 1, { opacity: 0, display: 'none' })
   .fromTo(goyaInfo7, 1, { opacity: 0 }, { opacity: 1, display: 'block' })
   .addPause(3)
-  .to(goyaImage1, 8, { y: 30 }, 'show_info_1')
-  .to(goyaImage2, 8, { y: 15 }, 'show_info_1')
-  .to(goyaImage3, 8, { y: 10 }, 'show_info_1')
-  .to(goyaImage4, 8, { scale: 1.005, z: 10 }, 'show_info_1')
-  .to(goyaImage5, 8, { scale: 1.005 }, 'show_info_1');
+  .to(goyaImage2, 8, { y: 25 }, 'show_info_1')
+  .to(goyaImage3, 8, { y: 10 }, 'show_info_1');

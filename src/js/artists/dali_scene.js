@@ -16,7 +16,7 @@ const daliInfo5 = document.querySelectorAll('#dali-info-5');
 const daliInfo6 = document.querySelectorAll('#dali-info-6');
 const daliInfo7 = document.querySelectorAll('#dali-info-7');
 // const daliImage1 = document.querySelectorAll('#dali-image-1');
-const daliImage2 = document.querySelectorAll('#dali-image-2');
+// const daliImage2 = document.querySelectorAll('#dali-image-2');
 const daliImage3 = document.querySelectorAll('#dali-image-3');
 const daliImage4 = document.querySelectorAll('#dali-image-4');
 const perspective = 1000;
@@ -58,6 +58,5 @@ gsap.timeline({
   .to(daliInfo6, 1, { opacity: 0, display: 'none' })
   .fromTo(daliInfo7, 1, { opacity: 0 }, { opacity: 1, display: 'block' })
   .addPause(3)
-  .to(daliImage2, 10, { y: -30 }, 'show_info_1')
-  .to(daliImage3, 10, { y: -10 }, 'show_info_1')
-  .to(daliImage4, 10, { y: -5 }, 'show_info_1');
+  .to(daliImage3, 10, { z: -500 }, 'show_info_1')
+  .to(daliImage4, 10, { z: -500 }, 'show_info_1');

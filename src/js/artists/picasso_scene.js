@@ -15,7 +15,7 @@ const picassoInfo4 = document.querySelectorAll('#picasso-info-4');
 const picassoInfo5 = document.querySelectorAll('#picasso-info-5');
 const picassoInfo6 = document.querySelectorAll('#picasso-info-6');
 const picassoInfo7 = document.querySelectorAll('#picasso-info-7');
-const picassoImage1 = document.querySelectorAll('#picasso-image-1');
+// const picassoImage1 = document.querySelectorAll('#picasso-image-1');
 const picassoImage2 = document.querySelectorAll('#picasso-image-2');
 const picassoImage3 = document.querySelectorAll('#picasso-image-3');
 const picassoImage4 = document.querySelectorAll('#picasso-image-4');
@@ -65,14 +65,13 @@ gsap.timeline({
   .to(picassoInfo6, 1, { opacity: 0, display: 'none' })
   .fromTo(picassoInfo7, 1, { opacity: 0 }, { opacity: 1, display: 'block' })
   .addPause(3)
-  .to(picassoImage1, 10, { y: -15 }, 'show_info_1')
-  .to(picassoImage2, 10, { y: -10 }, 'show_info_1')
+  .to(picassoImage2, 10, { x: 20, y: 15 }, 'show_info_1')
   .to(picassoImage3, 10, { y: -8 }, 'show_info_1')
-  .to(picassoImage4, 10, { y: -6 }, 'show_info_1')
+  .to(picassoImage4, 10, { x: 10, y: 10, scale: 1.03 }, 'show_info_1')
   .to(picassoImage5, 10, { y: -20 }, 'show_info_1')
-  .to(picassoImage6, 10, { y: -11, scale: 1.015 }, 'show_info_1')
+  .to(picassoImage6, 10, { x: 20, y: -11, scale: 1.015 }, 'show_info_1')
   .to(picassoImage7, 10, { y: -2 }, 'show_info_1')
-  .to(picassoImage8, 10, { y: -20, scale: 1.015 }, 'show_info_1')
-  .to(picassoImage9, 10, { y: -20, scale: 1.015 }, 'show_info_1')
+  .to(picassoImage8, 10, { x: -20, y: -20, scale: 1.015 }, 'show_info_1')
+  .to(picassoImage9, 10, { x: -20, y: -20, scale: 1.015 }, 'show_info_1')
   .to(picassoImage10, 10, { y: -10, scale: 1.015 }, 'show_info_1')
   .to(picassoImage11, 10, { x: -30, y: -18, scale: 1.05 }, 'show_info_1');
