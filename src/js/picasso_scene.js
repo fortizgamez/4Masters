@@ -7,6 +7,7 @@ const section = document.querySelector('#picasso.artist-section');
 const welcomeSection = document.querySelector('#picasso .artist-section__welcome');
 const sectionWrapper = document.querySelector('#picasso .artist-section__wrapper');
 const sectionInfo = document.querySelector('#picasso .artist-section__info');
+const imgFrame = document.querySelector('#picasso .artist-section__img-frame');
 const picassoInfo1 = document.querySelectorAll('#picasso-info-1');
 const picassoInfo2 = document.querySelectorAll('#picasso-info-2');
 const picassoInfo3 = document.querySelectorAll('#picasso-info-3');
@@ -39,8 +40,9 @@ gsap.timeline({
   },
 })
   .set(sectionWrapper, { css: { transformPerspective: perspective, transformStyle: 'preserve-3d' } })
-// Improve Quality
+  .addLabel('welcome_effect')
   .to(welcomeSection, 1, { css: { z: perspective } })
+  .fromTo(imgFrame, { filter: 'grayscale(100%) brightness(3)' }, { duration: 1, filter: 'grayscale(0) brightness(1)' }, 'welcome_effect-=0.3')
   .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
   .addLabel('show_info_1')
   .addPause(3)

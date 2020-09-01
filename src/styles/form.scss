@@ -14,7 +14,7 @@ button {
   outline: none;
   transition: all ease-in .2s;
 
-  &:hover, :focus {
+  &:hover, &:focus {
     background-color: $gray-0;
     color: $gray-9;
   }

@@ -7,6 +7,7 @@ const section = document.querySelector('#goya.artist-section');
 const welcomeSection = document.querySelector('#goya .artist-section__welcome');
 const sectionWrapper = document.querySelector('#goya .artist-section__wrapper');
 const sectionInfo = document.querySelector('#goya .artist-section__info');
+const imgFrame = document.querySelector('#goya .artist-section__img-frame');
 const goyaInfo1 = document.querySelectorAll('#goya-info-1');
 const goyaInfo2 = document.querySelectorAll('#goya-info-2');
 const goyaInfo3 = document.querySelectorAll('#goya-info-3');
@@ -33,8 +34,9 @@ gsap.timeline({
   },
 })
   .set(sectionWrapper, { css: { transformPerspective: perspective, transformStyle: 'preserve-3d' } })
-// Improve Quality
+  .addLabel('welcome_effect')
   .to(welcomeSection, 1, { z: perspective })
+  .fromTo(imgFrame, { filter: 'grayscale(100%) brightness(1.5)' }, { duration: 1, filter: 'grayscale(0) brightness(1)' }, 'welcome_effect-=0.3')
   .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
   .addLabel('show_info_1')
   .addPause(3)

@@ -18,4 +18,6 @@ const getLoadingProgress = (onProgressChange, onPageLoad) => {
 
 const validateEmail = (email) => (/\S+@\S+\.\S+/).test(email);
 
-export { getLoadingProgress, validateEmail };
+const randomIn = (maxValue) => Math.floor(Math.random() * maxValue) + 1;
+
+export { getLoadingProgress, validateEmail, randomIn };

@@ -4,7 +4,10 @@
     right: $size-sm;
     top: $size-md;
     margin: $margin-sm;
-    width: 2.5rem;
+
+    @include media-breakpoint-medium {
+        margin: $margin-lg;
+    }
 
     &:hover {
         cursor: pointer;
@@ -29,23 +32,36 @@
     background: $gray-9;
 
     @include media-breakpoint-medium {
+        justify-content: flex-end;
         width: 18.75rem;
-        height: 37.5rem;
-        right: 0;
+        height: auto;
+        right: $size-lg;
+        top: $size-xxl * 2;
+        background: none;
     }
 
     & .menu-list {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;        
+
+        @include media-breakpoint-medium {
+            align-items: flex-end;
+        }
 
         & a {
+            position: relative;
             text-decoration: none;
-            font-size: 1.4rem;
+            font-size: $size-xxl;
             font-weight: bold;
             font-family: 'Archivo';
             line-height: 1.75rem;
-            padding: $padding-sm $padding-sm;
+            padding: $padding-lg $padding-sm;
+            color: $gray-3;
+
+            &:hover {
+                color: $white;
+            }
         }
     }
 }

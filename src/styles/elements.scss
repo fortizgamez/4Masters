@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 /* Elements */
 body {
     font-family: 'Open Sans';
@@ -18,7 +20,8 @@ h6 {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 5rem;
+    margin: 0 $margin-xxl;   
 }
 
 h2 {
@@ -55,34 +58,14 @@ p {
 }
 
 /* ------------ Medium Screens ------------ */
-/*
 @include media-breakpoint-medium {
     h1 {
         font-size: 6rem;
-    }
-    
-    h2 {
-        font-size: 3.75rem;
-    }
-    
-    h3 {
-        font-size: 3rem;
-    }
-    
-    h4 {
-        font-size: 2.125rem;
-    }
-    
-    h5 {
-        font-size: 1.5rem;
-    }
-    
-    h6 {
-        font-size: 1.25rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
+    }    
 }
-*/
+
+@include media-breakpoint-large {
+    h1 {
+        font-size: 7rem;
+    }    
+}
