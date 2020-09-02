@@ -5,34 +5,26 @@
 }
 
 .artist-section__welcome {
-    position: absolute;
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 100%;
-    z-index: 5;
 }
 
-.artist-section__img-frame {
-    position: relative;
-    height: 100%;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-
-    & > div {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 200vw;
-        height: 200vh;
-        margin-left: -100vw;
-        margin-top: -100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        transform: translateZ(-700px);
-    }
+.artist-section__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200vw;
+    height: 200vh;
+    margin-left: -100vw;
+    margin-top: -100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-700px);
 }
+
 
 // Artist Info
 .artist-section__info {
