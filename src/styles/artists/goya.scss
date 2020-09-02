@@ -1,5 +1,15 @@
 #goya {
   background: #64472d;
+
+  & .artist-section__img-frame {  
+    & > div {
+      background-position: 20% center;
+      
+      @include media-breakpoint-large {
+        background-position: center 70%;
+      }
+    }
+  }
 }
 
 #goya .artist-section__welcome {

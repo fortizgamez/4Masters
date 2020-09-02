@@ -1,4 +1,14 @@
-#velazquez .artist-section__welcome {
+#velazquez .artist-section__img-frame {  
+  & > div {
+    background-position: 70% top;
+    
+    @include media-breakpoint-large {
+      background-position: right top;
+    }
+  }
+}
+
+ .artist-section__welcome {
   background-image: url('../img/velazquez_black.min.svg');
 }
 

@@ -1,5 +1,15 @@
-#dali .artist-section__welcome {
-  background-image: url('../img/dali_black.min.svg');
+#dali {  
+  & .artist-section__welcome {
+    background-image: url('../img/dali_black.min.svg');
+  }
+
+  & .artist-section__img-frame {  
+    & > div {      
+      @include media-breakpoint-large {
+        background-position: 100% 40%;
+      }
+    }
+  }
 }
 
 #dali-image-1 {

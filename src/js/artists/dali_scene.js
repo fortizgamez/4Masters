@@ -5,7 +5,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const section = document.querySelector('#dali.artist-section');
 const welcomeSection = document.querySelector('#dali .artist-section__welcome');
-const sectionWrapper = document.querySelector('#dali .artist-section__wrapper');
 const sectionInfo = document.querySelector('#dali .artist-section__info');
 const imgFrame = document.querySelector('#dali .artist-section__img-frame');
 const daliInfo1 = document.querySelectorAll('#dali-info-1');
@@ -15,8 +14,7 @@ const daliInfo4 = document.querySelectorAll('#dali-info-4');
 const daliInfo5 = document.querySelectorAll('#dali-info-5');
 const daliInfo6 = document.querySelectorAll('#dali-info-6');
 const daliInfo7 = document.querySelectorAll('#dali-info-7');
-// const daliImage1 = document.querySelectorAll('#dali-image-1');
-// const daliImage2 = document.querySelectorAll('#dali-image-2');
+const daliImage2 = document.querySelectorAll('#dali-image-2');
 const daliImage3 = document.querySelectorAll('#dali-image-3');
 const daliImage4 = document.querySelectorAll('#dali-image-4');
 const perspective = 1000;
@@ -32,7 +30,6 @@ gsap.timeline({
     scrub: 1,
   },
 })
-  .set(sectionWrapper, { css: { transformPerspective: perspective, transformStyle: 'preserve-3d' } })
   .addLabel('welcome_effect')
   .to(welcomeSection, 1, { css: { z: perspective } })
   .fromTo(imgFrame, { filter: 'grayscale(100%) brightness(3)' }, { duration: 1, filter: 'grayscale(0) brightness(1)' }, 'welcome_effect-=0.3')
@@ -58,5 +55,10 @@ gsap.timeline({
   .to(daliInfo6, 1, { opacity: 0, display: 'none' })
   .fromTo(daliInfo7, 1, { opacity: 0 }, { opacity: 1, display: 'block' })
   .addPause(3)
-  .to(daliImage3, 10, { z: -500 }, 'show_info_1')
-  .to(daliImage4, 10, { z: -500 }, 'show_info_1');
+  .fromTo('#dali .artist-section__img-frame > div',
+    { backgroundPosition: '0% 10%' },
+    { duration: 10, backgroundPosition: '50% 40%' },
+    'show_info_1')
+  .from(daliImage2, 10, { z: -600 }, 'show_info_1')
+  .from(daliImage3, 10, { y: -100, z: -560 }, 'show_info_1')
+  .from(daliImage4, 10, { y: -100, z: -560 }, 'show_info_1');
