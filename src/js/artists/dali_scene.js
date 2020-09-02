@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 const section = document.querySelector('#dali.artist-section');
 const welcomeSection = document.querySelector('#dali .artist-section__welcome');
 const sectionInfo = document.querySelector('#dali .artist-section__info');
-const imgFrame = document.querySelector('#dali .artist-section__img-frame');
+const artistImgs = document.querySelectorAll('#dali .artist-section__img');
 const daliInfo1 = document.querySelectorAll('#dali-info-1');
 const daliInfo2 = document.querySelectorAll('#dali-info-2');
 const daliInfo3 = document.querySelectorAll('#dali-info-3');
@@ -32,7 +32,10 @@ gsap.timeline({
 })
   .addLabel('welcome_effect')
   .to(welcomeSection, 1, { css: { z: perspective } })
-  .fromTo(imgFrame, { filter: 'grayscale(100%) brightness(3)' }, { duration: 1, filter: 'grayscale(0) brightness(1)' }, 'welcome_effect-=0.3')
+  .fromTo(artistImgs,
+    { filter: 'grayscale(100%) brightness(3)' },
+    { duration: 1, filter: 'grayscale(0) brightness(1)' },
+    'welcome_effect-=0.3')
   .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
   .addLabel('show_info_1')
   .addPause(3)
@@ -55,7 +58,7 @@ gsap.timeline({
   .to(daliInfo6, 1, { opacity: 0, display: 'none' })
   .fromTo(daliInfo7, 1, { opacity: 0 }, { opacity: 1, display: 'block' })
   .addPause(3)
-  .fromTo('#dali .artist-section__img-frame > div',
+  .fromTo(artistImgs,
     { backgroundPosition: '0% 10%' },
     { duration: 10, backgroundPosition: '50% 40%' },
     'show_info_1')

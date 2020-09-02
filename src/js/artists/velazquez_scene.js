@@ -35,7 +35,9 @@ gsap.timeline({
 })
   .addLabel('welcome_effect')
   .to(welcomeSection, 1, { css: { z: perspective } })
-  .fromTo(imgFrame, { filter: 'grayscale(100%) brightness(1.5)' }, { duration: 1, filter: 'grayscale(0) brightness(1)' }, 'welcome_effect-=0.3')
+  .fromTo(imgFrame,
+    { filter: 'grayscale(100%) brightness(1.5)' },
+    { duration: 1, filter: 'grayscale(0) brightness(1)' }, 'welcome_effect-=0.3')
   .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
   .addLabel('show_info_1')
   .addPause(3)

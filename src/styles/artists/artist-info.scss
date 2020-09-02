@@ -1,0 +1,78 @@
+@import '../variables';
+
+.artist-section__info--collapsed,
+.artist-section__info--open {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: $margin-md;
+  padding: $padding-lg;
+  background-color: $gray-9;
+  color: $white;  
+
+  @include media-breakpoint-medium {
+    margin: $margin-lg;
+    padding: $padding-xl;
+  }
+}
+
+.artist-section__info--open {
+  
+  @include media-breakpoint-medium {
+    width: 50%;
+  }
+
+  & p:not(:first-of-type) {
+    display: none;
+  }
+
+  .artist-section__info-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;    
+    position: relative;
+    right: -($size-lg * 0.62);
+    top: -($size-lg * 0.62);
+    width: $size-lg * 1.25;
+    height: $size-lg * 1.25;
+    padding: $padding-lg;
+    z-index: 5;  
+  
+    @include media-breakpoint-medium {
+        right: -($size-lg * 1.25);
+        top: -($size-lg * 1.25);
+    }
+  
+    line {
+        stroke: $gray-0;
+        stroke-width: 2px;
+    }
+  }
+}
+
+.artist-section__info--collapsed {
+  display: none;
+
+  .artist-section__info-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+        
+    line {
+        stroke: $gray-0;
+        stroke-width: 2px;
+    }
+
+    text {
+      fill: $gray-0;
+      font-size: 3px;
+    }
+
+    rect {
+        stroke: $gray-0;
+        stroke-width: 2px;
+        fill: transparent;
+    }
+  }
+}

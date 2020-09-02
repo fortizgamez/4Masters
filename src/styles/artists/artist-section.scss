@@ -25,52 +25,8 @@
     transform: translateZ(-700px);
 }
 
-
-// Artist Info
-.artist-section__info {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: $margin-md;    
-    padding: $padding-lg;
-    background-color: $gray-9;
-    color: $white;
-
-    p:not(:first-of-type) {
-        display: none;
-    }
-
-    @include media-breakpoint-medium {
-        width: 50%;
-        margin: $margin-lg;
-        padding: $padding-xl;
-    }
-}
-
-.artist-section__info-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: right;    
-    position: relative;
-    right: -($size-lg * 0.62);
-    top: -($size-lg * 0.62);
-    width: $size-lg * 1.25;
-    height: $size-lg * 1.25;
-    padding: $padding-lg;
-
-    @include media-breakpoint-medium {
-        right: -($size-lg * 1.25);
-        top: -($size-lg * 1.25);
-    }
-
-    line {
-        stroke: $white;
-        stroke-width: 2px;
-    }
-}
-
 @import './velazquez';
 @import './goya';
 @import './picasso';
 @import './dali';
+@import './artist-info';
