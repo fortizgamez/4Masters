@@ -22,6 +22,9 @@ const loadTime = () => {
 
 window.addEventListener('load', loadTime, false);
 
-const perfEntries = performance.getEntriesByType('navigation');
-console.log(`TimeStamp to Load: ${perfEntries.domContentLoadedEventEnd - perfEntries.domContentLoadedEventStart}`);
-console.log(perfEntries);
+window.onload = () => {
+  setTimeout(() => {
+    const t = performance.timing;
+    console.log(`Expected: ${t.loadEventEnd - t.responseEnd}`);
+  }, 0);
+};
