@@ -25,8 +25,6 @@ gsap.timeline({
     start: 'top top',
     end: '+=10000',
     pin: true,
-    anticipatePin: 1,
-    pinSpacing: 'margin',
     // markers: true,
     scrub: 1,
   },

@@ -1,8 +1,4 @@
 #dali {  
-  & .artist-section__welcome {
-    background-image: url('../img/dali_black.min.svg');
-  }
-
   & .artist-section__img-frame {  
     & > div {      
       @include media-breakpoint-large {
@@ -10,20 +6,4 @@
       }
     }
   }
-}
-
-#dali-image-1 {
-  background-image: url('../img/the-persistance-of-memory-sky.png');
-}
-
-#dali-image-2 {
-  background-image: url('../img/the-persistance-of-memory-sea-and-mountains.png');
-}
-
-#dali-image-3 {
-  background-image: url('../img/the-persistance-of-memory-mainland.png');
-}
-
-#dali-image-4 {
-  background-image: url('../img/the-persistance-of-memory-rock.png');
 }

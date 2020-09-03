@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "gsap": "file:package/gsap-bonus.tgz",
-    "scrollmagic": "^2.0.7"
+    "preload-js": "^0.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
