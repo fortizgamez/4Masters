@@ -8,7 +8,7 @@ import velazquezImage3 from '../img/the-triumph-of-bacchus-man2.png';
 import velazquezImage4 from '../img/the-triumph-of-bacchus-baccus-and-man.png';
 import velazquezImage5 from '../img/the-triumph-of-bacchus-man1.png';
 import velazquezImage6 from '../img/the-triumph-of-bacchus-tree.png';
-import goyaWelcome from '../img/goya_black.min.svg';
+/* import goyaWelcome from '../img/goya_black.min.svg';
 import goyaImage1 from '../img/the-third-of-may-1808-sky.png';
 import goyaImage2 from '../img/the-third-of-may-1808-cathedral.png';
 import goyaImage3 from '../img/the-third-of-may-1808-medow.png';
@@ -30,7 +30,7 @@ import daliWelcome from '../img/dali_black.min.svg';
 import daliImage1 from '../img/the-persistance-of-memory-sky.png';
 import daliImage2 from '../img/the-persistance-of-memory-sea-and-mountains.png';
 import daliImage3 from '../img/the-persistance-of-memory-mainland.png';
-import daliImage4 from '../img/the-persistance-of-memory-rock.png';
+import daliImage4 from '../img/the-persistance-of-memory-rock.png'; */
 
 const loading = document.querySelector('#loading');
 const loadingProgress = document.querySelector('#loading__progress');
@@ -43,8 +43,8 @@ const imageMap = new Map()
   .set('#velazquez-image-3', velazquezImage3)
   .set('#velazquez-image-4', velazquezImage4)
   .set('#velazquez-image-5', velazquezImage5)
-  .set('#velazquez-image-6', velazquezImage6)
-  .set('#goya .artist-section__welcome', goyaWelcome)
+  .set('#velazquez-image-6', velazquezImage6);
+  /* .set('#goya .artist-section__welcome', goyaWelcome)
   .set('#goya-image-1', goyaImage1)
   .set('#goya-image-2', goyaImage2)
   .set('#goya-image-3', goyaImage3)
@@ -66,7 +66,7 @@ const imageMap = new Map()
   .set('#dali-image-1', daliImage1)
   .set('#dali-image-2', daliImage2)
   .set('#dali-image-3', daliImage3)
-  .set('#dali-image-4', daliImage4);
+  .set('#dali-image-4', daliImage4) */
 
 const buildManifiest = () => {
   const manifest = [];

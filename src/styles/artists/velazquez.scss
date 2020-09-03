@@ -1,9 +1,13 @@
-#velazquez .artist-section__img-frame {  
-  & > div {
-    background-position: 70% top;
-    
-    @include media-breakpoint-large {
-      background-position: right top;
+#velazquez {
+  background: #3e3123;
+
+  & .artist-section__img-frame {  
+    & > div {
+      background-position: 70% top;
+      
+      @include media-breakpoint-large {
+        background-position: right top;
+      }
     }
-  }
-}
+  } 
+} 
