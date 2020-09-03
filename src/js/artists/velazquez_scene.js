@@ -14,7 +14,6 @@ const velazquezInfo4 = document.querySelectorAll('#velazquez-info-4');
 const velazquezInfo5 = document.querySelectorAll('#velazquez-info-5');
 const velazquezInfo6 = document.querySelectorAll('#velazquez-info-6');
 const velazquezInfo7 = document.querySelectorAll('#velazquez-info-7');
-const velazquezImage1 = document.querySelectorAll('#velazquez-image-1');
 const velazquezImage2 = document.querySelectorAll('#velazquez-image-2');
 const velazquezImage3 = document.querySelectorAll('#velazquez-image-3');
 const velazquezImage4 = document.querySelectorAll('#velazquez-image-4');
@@ -28,8 +27,9 @@ gsap.timeline({
     start: 'top top',
     end: '+=10000',
     pin: true,
-    // markers: true,
-    scrub: 1,
+    anticipatePin: 10,
+    markers: true,
+    scrub: true,
   },
 })
   .addLabel('welcome_effect')
@@ -59,12 +59,6 @@ gsap.timeline({
   .to(velazquezInfo6, 1, { opacity: 0, display: 'none' })
   .fromTo(velazquezInfo7, 1, { opacity: 0 }, { opacity: 1, display: 'block' })
   .addPause(3)
-  .from(velazquezImage1, {
-    duration: 12,
-    y: -5,
-    z: '-600px',
-    filter: 'blur(1px)',
-  }, 'show_info_1')
   .from(velazquezImage2, {
     duration: 12,
     y: 15,
