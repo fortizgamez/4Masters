@@ -62,30 +62,30 @@ const largeScreenTimeline = () => {
     .from(velazquezImage2, {
       duration: 12,
       y: 15,
-      z: '-950px',
+      z: '-970px',
     }, 'show_info_1')
     .from(velazquezImage3, {
       duration: 12,
       y: 15,
-      z: '-950px',
+      z: '-970px',
     }, 'show_info_1')
     .from(velazquezImage4, {
       duration: 12,
       y: -30,
-      z: '-900px',
+      z: '-930px',
     }, 'show_info_1')
     .from(velazquezImage5, {
       duration: 12,
       x: 120,
       y: -100,
       filter: 'blur(6px)',
-      z: '-850px',
+      z: '-900px',
     }, 'show_info_1')
     .from(velazquezImage6, {
       duration: 12,
       x: 65,
       y: -40,
-      z: '-850px',
+      z: '-900px',
       filter: 'blur(6px)',
     }, 'show_info_1');
 };
