@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 const buldAllScreenTimelines = (
   section,
   welcomeSection,
-  imgs,
   imgSmall,
   sectionInfo,
   artistInfo1,
@@ -22,17 +21,17 @@ const buldAllScreenTimelines = (
     scrollTrigger: {
       trigger: section,
       start: 'top top',
-      end: '+=2000',
+      end: '+=8000',
       pin: true,
       anticipatePin: 1,
       scrub: 0.5,
     },
   })
     .addLabel('welcome_effect')
-    .to(welcomeSection, 1, { css: { z: 1000 } })
-    .fromTo(imgs,
-      { filter: 'grayscale(100%) brightness(1.5)' },
-      { duration: 1, filter: 'grayscale(0) brightness(1)' }, 'welcome_effect-=0.3')
+    .to(welcomeSection, 1, { z: 1000 })
+    .fromTo(welcomeSection,
+      { backdropFilter: 'grayscale(100%) brightness(3)' },
+      { backdropFilter: 'grayscale(0%) brightness(1)' }, 'welcome_effect')
     .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
     .addLabel('show_info_1')
     .addPause(3)

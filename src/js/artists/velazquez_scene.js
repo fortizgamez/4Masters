@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const section = document.querySelector('#velazquez.artist-section');
 const welcomeSection = document.querySelector('#velazquez .artist-section__welcome');
 const sectionInfo = document.querySelector('#velazquez .artist-section__info');
-const velazquezImgs = document.querySelectorAll('#velazquez .artist-section__img');
 const velazquezInfo1 = document.querySelectorAll('#velazquez-info-1');
 const velazquezInfo2 = document.querySelectorAll('#velazquez-info-2');
 const velazquezInfo3 = document.querySelectorAll('#velazquez-info-3');
@@ -35,11 +34,10 @@ const largeScreenTimeline = () => {
     },
   })
     .addLabel('welcome_effect')
-    .to(welcomeSection, 1, { css: { z: 1000 } })
-    .fromTo(velazquezImgs,
-      { filter: 'grayscale(100%) brightness(1.5)' },
-      { duration: 1, filter: 'grayscale(0) brightness(1)' }, 'welcome_effect-=0.3')
-    .set(velazquezImgs, { filter: 'none' })
+    .to(welcomeSection, 1, { z: 1000, backdropFilter: 'grayscale(0%) brightness(1)' })
+    .fromTo(welcomeSection,
+      { backdropFilter: 'grayscale(100%) brightness(3)' },
+      { backdropFilter: 'grayscale(0%) brightness(1)' }, 'welcome_effect')
     .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
     .addLabel('show_info_1')
     .addPause(3)
@@ -97,7 +95,6 @@ if (isLargeScreen()) largeScreenTimeline();
 else {
   buldAllScreenTimelines(section,
     welcomeSection,
-    velazquezImgs,
     velazquezImageSmall,
     velazquezInfo1,
     velazquezInfo2,

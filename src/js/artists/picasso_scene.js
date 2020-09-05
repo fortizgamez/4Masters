@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const section = document.querySelector('#picasso.artist-section');
 const welcomeSection = document.querySelector('#picasso .artist-section__welcome');
 const sectionInfo = document.querySelector('#picasso .artist-section__info');
-const picassoImgs = document.querySelectorAll('#picasso .artist-section__img');
 const picassoInfo1 = document.querySelectorAll('#picasso-info-1');
 const picassoInfo2 = document.querySelectorAll('#picasso-info-2');
 const picassoInfo3 = document.querySelectorAll('#picasso-info-3');
@@ -17,7 +16,6 @@ const picassoInfo5 = document.querySelectorAll('#picasso-info-5');
 const picassoInfo6 = document.querySelectorAll('#picasso-info-6');
 const picassoInfo7 = document.querySelectorAll('#picasso-info-7');
 const picassoImageSmall = document.querySelectorAll('#picasso-image-small');
-// const picassoImage1 = document.querySelectorAll('#picasso-image-1');
 const picassoImage2 = document.querySelectorAll('#picasso-image-2');
 const picassoImage3 = document.querySelectorAll('#picasso-image-3');
 const picassoImage4 = document.querySelectorAll('#picasso-image-4');
@@ -41,12 +39,10 @@ const largeScreenTimeline = () => {
     },
   })
     .addLabel('welcome_effect')
-    .to(welcomeSection, 1, { css: { z: 1000 } })
-    .fromTo(picassoImgs,
-      { filter: 'grayscale(100%) brightness(3)' },
-      { duration: 1, filter: 'grayscale(0) brightness(1)' },
-      'welcome_effect-=0.3')
-    .set(picassoImgs, { filter: 'none' })
+    .to(welcomeSection, 1, { z: 1000 })
+    .fromTo(welcomeSection,
+      { backdropFilter: 'grayscale(100%) brightness(3)' },
+      { backdropFilter: 'grayscale(0%) brightness(1)' }, 'welcome_effect')
     .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
     .addLabel('show_info_1')
     .addPause(3)
@@ -85,7 +81,6 @@ if (isLargeScreen()) largeScreenTimeline();
 else {
   buldAllScreenTimelines(section,
     welcomeSection,
-    picassoImgs,
     picassoImageSmall,
     picassoInfo1,
     picassoInfo2,

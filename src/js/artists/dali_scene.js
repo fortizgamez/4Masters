@@ -33,12 +33,10 @@ const largeScreenTimeline = () => {
     },
   })
     .addLabel('welcome_effect')
-    .to(welcomeSection, 1, { css: { z: 1000 } })
-    .fromTo(daliImgs,
-      { filter: 'grayscale(100%) brightness(3)' },
-      { duration: 1, filter: 'grayscale(0) brightness(1)' },
-      'welcome_effect-=0.3')
-    .set(daliImgs, { filter: 'none' })
+    .to(welcomeSection, 1, { z: 1000 })
+    .fromTo(welcomeSection,
+      { backdropFilter: 'grayscale(100%) brightness(3)' },
+      { backdropFilter: 'grayscale(0%) brightness(1)' }, 'welcome_effect')
     .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
     .addLabel('show_info_1')
     .addPause(3)
@@ -76,7 +74,6 @@ else {
     welcomeSection,
     buldAllScreenTimelines(section,
       welcomeSection,
-      daliImgs,
       daliImageSmall,
       daliInfo1,
       daliInfo2,

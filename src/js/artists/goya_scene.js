@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const section = document.querySelector('#goya.artist-section');
 const welcomeSection = document.querySelector('#goya .artist-section__welcome');
 const sectionInfo = document.querySelector('#goya .artist-section__info');
-const goyaImgs = document.querySelectorAll('#goya .artist-section__img');
 const goyaInfo1 = document.querySelectorAll('#goya-info-1');
 const goyaInfo2 = document.querySelectorAll('#goya-info-2');
 const goyaInfo3 = document.querySelectorAll('#goya-info-3');
@@ -35,11 +34,9 @@ const largeScreenTimeline = () => {
   })
     .addLabel('welcome_effect')
     .to(welcomeSection, 1, { z: 1000 })
-    .fromTo(goyaImgs,
-      { filter: 'grayscale(100%) brightness(1.5)' },
-      { duration: 1, filter: 'grayscale(0) brightness(1)' },
-      'welcome_effect-=0.3')
-    .set(goyaImgs, { filter: 'none' })
+    .fromTo(welcomeSection,
+      { backdropFilter: 'grayscale(100%) brightness(3)' },
+      { backdropFilter: 'grayscale(0%) brightness(1)' }, 'welcome_effect')
     .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
     .addLabel('show_info_1')
     .addPause(3)
@@ -88,7 +85,6 @@ if (isLargeScreen()) largeScreenTimeline();
 else {
   buldAllScreenTimelines(section,
     welcomeSection,
-    goyaImgs,
     goyaImageSmall,
     goyaInfo1,
     goyaInfo2,
