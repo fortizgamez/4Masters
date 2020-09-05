@@ -15,7 +15,6 @@ const velazquezInfo4 = document.querySelectorAll('#velazquez-info-4');
 const velazquezInfo5 = document.querySelectorAll('#velazquez-info-5');
 const velazquezInfo6 = document.querySelectorAll('#velazquez-info-6');
 const velazquezInfo7 = document.querySelectorAll('#velazquez-info-7');
-const velazquezImageSmall = document.querySelectorAll('#velazquez-image-small');
 const velazquezImage2 = document.querySelectorAll('#velazquez-image-2');
 const velazquezImage3 = document.querySelectorAll('#velazquez-image-3');
 const velazquezImage4 = document.querySelectorAll('#velazquez-image-4');
@@ -95,7 +94,7 @@ if (isLargeScreen()) largeScreenTimeline();
 else {
   buldAllScreenTimelines(section,
     welcomeSection,
-    velazquezImageSmall,
+    sectionInfo,
     velazquezInfo1,
     velazquezInfo2,
     velazquezInfo3,

@@ -1,13 +1,11 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { getRandomBackgroundPosition } from '../utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const buldAllScreenTimelines = (
   section,
   welcomeSection,
-  imgSmall,
   sectionInfo,
   artistInfo1,
   artistInfo2,
@@ -21,7 +19,7 @@ const buldAllScreenTimelines = (
     scrollTrigger: {
       trigger: section,
       start: 'top top',
-      end: '+=8000',
+      end: '+=10000',
       pin: true,
       anticipatePin: 1,
       scrub: 0.5,
@@ -31,7 +29,7 @@ const buldAllScreenTimelines = (
     .to(welcomeSection, 1, { z: 1000 })
     .fromTo(welcomeSection,
       { backdropFilter: 'grayscale(100%) brightness(3)' },
-      { backdropFilter: 'grayscale(0%) brightness(1)' }, 'welcome_effect')
+      { backdropFilter: 'grayscale(0%) brightness(1)' }, 'welcome_effect-=-0.3')
     .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
     .addLabel('show_info_1')
     .addPause(3)
@@ -58,10 +56,7 @@ const buldAllScreenTimelines = (
     .to(artistInfo6, 1, { opacity: 0, display: 'none' })
     .addLabel('show_info_7')
     .fromTo(artistInfo7, 1, { opacity: 0 }, { opacity: 1, display: 'block' })
-    .addPause(3)
-    .to(imgSmall, 1, { scale: 2 }, 'show_info_2')
-    .to(imgSmall, 10, { backgroundPosition: getRandomBackgroundPosition() }, 'show_info_2')
-    .to(imgSmall, 10, { backgroundPosition: getRandomBackgroundPosition() }, 'show_info_5');
+    .addPause(3);
 };
 
 export default buldAllScreenTimelines;

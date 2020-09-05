@@ -1,7 +1,7 @@
-#dali {  
-  & .artist-section__img-frame {  
-    & > div {      
-      @include media-breakpoint-large {
+@include media-breakpoint-large {
+  #dali {  
+    & .artist-section__img-frame {  
+      & > div {        
         background-position: 100% 40%;
       }
     }

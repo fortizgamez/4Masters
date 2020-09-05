@@ -15,7 +15,6 @@ const goyaInfo4 = document.querySelectorAll('#goya-info-4');
 const goyaInfo5 = document.querySelectorAll('#goya-info-5');
 const goyaInfo6 = document.querySelectorAll('#goya-info-6');
 const goyaInfo7 = document.querySelectorAll('#goya-info-7');
-const goyaImageSmall = document.querySelectorAll('#goya-image-small');
 const goyaImage2 = document.querySelectorAll('#goya-image-2');
 const goyaImage3 = document.querySelectorAll('#goya-image-3');
 const goyaImage4 = document.querySelectorAll('#goya-image-4');
@@ -85,7 +84,7 @@ if (isLargeScreen()) largeScreenTimeline();
 else {
   buldAllScreenTimelines(section,
     welcomeSection,
-    goyaImageSmall,
+    sectionInfo,
     goyaInfo1,
     goyaInfo2,
     goyaInfo3,

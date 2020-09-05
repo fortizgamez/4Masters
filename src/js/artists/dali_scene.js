@@ -16,7 +16,6 @@ const daliInfo4 = document.querySelectorAll('#dali-info-4');
 const daliInfo5 = document.querySelectorAll('#dali-info-5');
 const daliInfo6 = document.querySelectorAll('#dali-info-6');
 const daliInfo7 = document.querySelectorAll('#dali-info-7');
-const daliImageSmall = document.querySelectorAll('#dali-image-small');
 const daliImage2 = document.querySelectorAll('#dali-image-2');
 const daliImage3 = document.querySelectorAll('#dali-image-3');
 const daliImage4 = document.querySelectorAll('#dali-image-4');
@@ -74,7 +73,7 @@ else {
     welcomeSection,
     buldAllScreenTimelines(section,
       welcomeSection,
-      daliImageSmall,
+      sectionInfo,
       daliInfo1,
       daliInfo2,
       daliInfo3,

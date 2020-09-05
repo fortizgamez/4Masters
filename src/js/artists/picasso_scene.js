@@ -15,7 +15,6 @@ const picassoInfo4 = document.querySelectorAll('#picasso-info-4');
 const picassoInfo5 = document.querySelectorAll('#picasso-info-5');
 const picassoInfo6 = document.querySelectorAll('#picasso-info-6');
 const picassoInfo7 = document.querySelectorAll('#picasso-info-7');
-const picassoImageSmall = document.querySelectorAll('#picasso-image-small');
 const picassoImage2 = document.querySelectorAll('#picasso-image-2');
 const picassoImage3 = document.querySelectorAll('#picasso-image-3');
 const picassoImage4 = document.querySelectorAll('#picasso-image-4');
@@ -81,7 +80,7 @@ if (isLargeScreen()) largeScreenTimeline();
 else {
   buldAllScreenTimelines(section,
     welcomeSection,
-    picassoImageSmall,
+    sectionInfo,
     picassoInfo1,
     picassoInfo2,
     picassoInfo3,
