@@ -1,13 +1,15 @@
 #goya {
   background: #64472d;
 
-  & .artist-section__img-frame {  
-    & > div {
-      background-position: 20% center;
-      
-      @include media-breakpoint-large {
-        background-position: center 70%;
+  & .artist-section__img {  
+    background-position: 20% center;
+    
+    @include media-breakpoint-large {
+      background-position: center 70%;
+
+      &#goya-image-2 {
+        background-position: 0px -650px;
       }
-    }
+    }    
   }
 }
