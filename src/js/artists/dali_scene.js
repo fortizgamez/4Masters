@@ -38,6 +38,7 @@ const largeScreenTimeline = () => {
       { filter: 'grayscale(100%) brightness(3)' },
       { duration: 1, filter: 'grayscale(0) brightness(1)' },
       'welcome_effect-=0.3')
+    .set(daliImgs, { filter: 'none' })
     .fromTo(sectionInfo, 1, { opacity: 0 }, { opacity: 1 })
     .addLabel('show_info_1')
     .addPause(3)
