@@ -78,14 +78,14 @@ const largeScreenTimeline = () => {
     }, 'show_info_1')
     .from(velazquezImage5, {
       duration: 12,
-      x: 30,
-      y: -12,
+      x: 8,
+      y: -42,
       z: -900,
     }, 'show_info_1')
     .from(velazquezImage6, {
       duration: 12,
-      x: 30,
-      y: -12,
+      x: 8,
+      y: -42,
       z: -900,
     }, 'show_info_1');
 };

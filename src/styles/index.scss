@@ -1,13 +1,13 @@
 @import 'variables';
 @import 'mixins';
-@import 'main';
-@import 'animations';
 @import 'reset';
 @import 'elements';
+@import 'main';
 @import 'fonts';
 @import 'layout';
 @import 'loading';
 @import 'navigation';
-@import 'artists/artist-section';
+@import 'artist-section';
+@import 'artist-info';
 @import 'progress-circle';
 @import 'form';

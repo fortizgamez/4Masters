@@ -21,8 +21,8 @@ const buldAllScreenTimelines = (
       start: 'top top',
       end: '+=10000',
       pin: true,
-      anticipatePin: 1,
-      scrub: 0.5,
+      anticipatePin: 2,
+      scrub: 2,
     },
   })
     .addLabel('welcome_effect')

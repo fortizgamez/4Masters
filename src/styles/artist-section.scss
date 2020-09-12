@@ -1,0 +1,80 @@
+.artist-section__wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.artist-section__welcome,
+.artist-section__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.artist-section__img {
+    @include media-breakpoint-large {
+        top: 50%;
+        left: 50%;
+        width: 200vw;
+        height: 200vh;
+        margin-left: -100vw;
+        margin-top: -100vh;
+        transform: translateZ(-1000px);
+    }
+}
+
+// velazquez
+#velazquez {
+    & .artist-section__img {  
+      background-position: 70% top;
+    }
+  }
+  
+  @include media-breakpoint-large {
+    #velazquez {
+      background: #3e3123;
+      
+      & .artist-section__img {          
+        background-position: right top;            
+      } 
+    } 
+  }
+
+// Goya
+#goya {  
+    & .artist-section__img {  
+      background-position: 20% center;        
+    }
+  }
+  
+  @include media-breakpoint-large {
+    #goya {
+      background: #64472d;
+    
+      & .artist-section__img {  
+        background-position: center 70%;
+    
+          &#goya-image-2 {
+            background-position: 0px -650px;
+          }   
+      }
+    }
+  }
+
+// Dali
+@include media-breakpoint-large {
+    #dali {  
+        & .artist-section__img-frame {  
+            & > div {        
+                background-position: 100% 40%;
+            }
+        }
+    }
+}
+
+@import './artist-info';
