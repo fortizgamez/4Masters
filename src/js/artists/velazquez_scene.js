@@ -15,11 +15,6 @@ const velazquezInfo4 = document.querySelectorAll('#velazquez-info-4');
 const velazquezInfo5 = document.querySelectorAll('#velazquez-info-5');
 const velazquezInfo6 = document.querySelectorAll('#velazquez-info-6');
 const velazquezInfo7 = document.querySelectorAll('#velazquez-info-7');
-const velazquezImage2 = document.querySelectorAll('#velazquez-image-2');
-const velazquezImage3 = document.querySelectorAll('#velazquez-image-3');
-const velazquezImage4 = document.querySelectorAll('#velazquez-image-4');
-const velazquezImage5 = document.querySelectorAll('#velazquez-image-5');
-const velazquezImage6 = document.querySelectorAll('#velazquez-image-6');
 
 const largeScreenTimeline = () => {
   gsap.timeline({
@@ -58,36 +53,7 @@ const largeScreenTimeline = () => {
     .addPause(3)
     .to(velazquezInfo6, 1, { opacity: 0, display: 'none' })
     .fromTo(velazquezInfo7, 1, { opacity: 0 }, { opacity: 1, display: 'block' })
-    .addPause(3)
-    .from(velazquezImage2, {
-      duration: 12,
-      x: -25,
-      y: -15,
-      z: -950,
-    }, 'show_info_1')
-    .from(velazquezImage3, {
-      duration: 12,
-      x: -25,
-      y: -15,
-      z: -950,
-    }, 'show_info_1')
-    .from(velazquezImage4, {
-      duration: 12,
-      y: -30,
-      z: -930,
-    }, 'show_info_1')
-    .from(velazquezImage5, {
-      duration: 12,
-      x: 8,
-      y: -42,
-      z: -900,
-    }, 'show_info_1')
-    .from(velazquezImage6, {
-      duration: 12,
-      x: 8,
-      y: -42,
-      z: -900,
-    }, 'show_info_1');
+    .addPause(3);
 };
 
 if (isLargeScreen()) largeScreenTimeline();
